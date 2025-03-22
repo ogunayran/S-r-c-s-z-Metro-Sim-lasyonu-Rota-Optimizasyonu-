@@ -1,4 +1,4 @@
-# S-r-c-s-z-Metro-Sim-lasyonu-Rota-Optimizasyonu-
+# Surucusuz-Metro-Simulasyonu-Rota-Optimizasyonu-
 Bu projede, ankara metro ağında; İki istasyon arasındaki en hızlı, En az aktarmalı rotayı bulan bir simülasyon deneyimleyeceksiniz.
 
 ## Özellikler
