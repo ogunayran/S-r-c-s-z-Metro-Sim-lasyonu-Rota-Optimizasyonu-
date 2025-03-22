@@ -17,7 +17,7 @@ Bu projede, ankara metro ağında; İki istasyon arasındaki en hızlı, En az a
 - `MetroAgi` sınıfı: Metro ağı yapısını ve algoritmaları barındırır
 - Algoritmalar:
   - `en_az_aktarma_bul`: BFS algoritması
-  - `en_hizli_rota_bul`: A* (Dijkstra)
+  - `en_hizli_rota_bul`: A* 
   - `compute_route_duration`: Toplam rota süresi
 - Görselleştirme: `visualize_graph` fonksiyonu ile metro ağı diyagramı
 
