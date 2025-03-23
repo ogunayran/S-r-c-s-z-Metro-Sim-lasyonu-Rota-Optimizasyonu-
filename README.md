@@ -30,3 +30,7 @@ pip install networkx matplotlib
 python metro_simulasyon.py
 
 3. Terminalde örnek çıktılar görüntülenecek, ardından sizden başlangıç ve hedef istasyonlar istenecek.
+
+4. Yazduğınız iki istasyon arasındaki en kısa rotayı ve en az aktarmalı rotayı göreceksiniz.
+
+5. Son olarak Ankara metro hattı şeması karşınıza çıkacaktır.
