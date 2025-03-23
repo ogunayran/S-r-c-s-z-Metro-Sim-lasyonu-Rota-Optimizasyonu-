@@ -113,7 +113,6 @@ class MetroAgi:
         for i in range(len(route) - 1):
             current = route[i]
             next_station = route[i + 1]
-            # current'in komşuları arasında next_station'ı arıyoruz.
             for neighbor, sure in current.komsular:
                 if neighbor == next_station:
                     total += sure
@@ -138,7 +137,7 @@ class MetroAgi:
                     G.add_edge(station.idx, neighbor.idx, weight=weight)
                     added_edges.add(edge)
         
-        # Manuel olarak belirlenen düğüm konumları (örnek değerler, ihtiyaca göre ayarlayın)
+        # Düğüm konumlar
         pos = {
             "K1": (0, 2),
             "K2": (1, 2),
@@ -181,7 +180,6 @@ class MetroAgi:
 if __name__ == "__main__":
     metro = MetroAgi()
     
-    # İstasyonlar ekleme
     # Kırmızı Hat
     metro.istasyon_ekle("K1", "Kızılay(K)", "Kırmızı Hat")
     metro.istasyon_ekle("K2", "Ulus", "Kırmızı Hat")
@@ -216,7 +214,7 @@ if __name__ == "__main__":
     metro.baglanti_ekle("T2", "T3", 9)
     metro.baglanti_ekle("T3", "T4", 5)
     
-    # Hat aktarma bağlantıları (aynı istasyon farklı hatlar)
+    # Hat aktarma bağlantıları 
     metro.baglanti_ekle("K1", "M2", 2)
     metro.baglanti_ekle("K3", "T2", 3)
     metro.baglanti_ekle("M4", "T3", 2)
@@ -230,7 +228,7 @@ if __name__ == "__main__":
         duration1 = metro.compute_route_duration(rota1)
         print("En az aktarmalı rota ({} dakika):".format(duration1), " -> ".join(i.ad for i in rota1))
     
-    # Senaryo 2: AŞTİ'den OSB'ye en hızlı rota (A*)
+    # Senaryo 2: AŞTİ'den OSB'ye en hızlı rota 
     sonuc = metro.en_hizli_rota_bul("M1", "K4")
     if sonuc:
         rota2, sure = sonuc
